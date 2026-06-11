@@ -65,7 +65,7 @@ class PortfolioData {
   static const String phone = "9557880408";
   static const String address = "Bijnor (Uttar Pradesh)";
   static const String youtubeChannel = "https://youtube.com/@AbubakarAnsari";
-  static const String resumeUrl = "https://example.com/resume.pdf";
+  static const String resumeUrl = "assets/assets/my_resume.pdf";
   static const String githubUrl = "https://github.com/abubakar955786";
   static const String linkedinUrl = "https://linkedin.com/in/abubakar-ansari";
 }
