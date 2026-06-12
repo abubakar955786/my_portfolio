@@ -70421,7 +70421,7 @@ yQ(a){var s=$.ac.al$.x.k(0,a)
 if(s!=null)A.amz(s,0,B.In,B.hw,B.AF)},
 M(a){var s,r=this,q=null,p="Years Exp",o="Apps Live",n="Tutorials",m="Open Source",l=A.cd(a,q,t.w).w.a.a<800,k=r.VJ(),j=r.VQ(a,l),i=l?20:40,h=l?20:40,g=A.az(13,B.h.v()>>>16&255,B.h.v()>>>8&255,B.h.v()&255),f=A.dv(30),e=A.m1(B.d6,1),d=t.p
 if(l){s=A.amO(A.c([r.jy("4+",p),r.jy("20+",o),r.jy("300+",n),r.jy("10+",m)],d),!0,!0,!0)
-s=new A.uY(new A.a5H(2,20,0,1,q),s,q,B.aD,!1,q,q,B.qO,!0,q,4,B.aE,q,q,B.ab,B.ai,q)}else s=A.fx(A.c([r.jy("4+",p),r.jy("20+",o),r.jy("300+",n),r.jy("10+",m)],d),B.qv,B.aH,0)
+s=new A.uY(new A.a5H(2,20,0,1,q),s,q,B.aD,!1,q,q,B.qO,!0,q,4,B.aE,q,q,B.ab,B.ai,q)}else s=A.fx(A.c([r.jy("4+",p),r.jy("20+",o),r.jy("300+",n),r.jy("5+",m)],d),B.qv,B.aH,0)
 return new A.x0(A.cX(q,A.dg(A.c([j,A.mj(new A.Ih(r.d,A.dg(A.c([new A.EO(l,q),A.cX(q,s,B.t,q,q,new A.c8(g,q,e,f,q,q,B.a3),q,q,new A.b5(i,20,i,20),new A.b5(h,h,h,h),q,q,q),new A.Ca(r.f),new A.Il(l,r.r),new A.ww(l,!1,r.w),new A.ww(l,!0,r.x),new A.El(l,r.y),new A.Jx(l,q),new A.Dn(l,r.z),A.cX(q,A.dg(A.c([B.As,B.dP,A.c1("\xa9 2024 Abubakar Ansari. Built with Flutter",q,q,A.c2().$1$color(B.kJ),q)],d),B.ap,B.E),B.t,q,q,q,q,q,q,B.bO,q,q,q)],d),B.ap,B.E),q),1)],d),B.ap,B.E),B.t,q,q,B.xw,q,q,q,q,q,q,q),k,r.e)},
 VJ(){var s=this,r=null,q=A.amO(A.c([new A.E9(B.xx,A.CQ(A.c1("AA",r,r,A.c2().$3$color$fontSize$fontWeight(B.h,40,B.V),r),r,r),r),s.m9("About",s.f),s.m9("Skills",s.r),s.m9("Projects",s.w),s.m9("Packages",s.x),s.m9("Experience",s.y),s.m9("Contact",s.z),B.At,A.alu(B.BB,new A.aaz(s),A.c1("Download Resume",r,r,A.c2().$1$color(B.h),r))],t.p),!0,!0,!0)
 return new A.E7(B.kz,new A.Fr(q,r,B.aD,!1,r,r,B.xf,!1,r,9,B.aE,r,r,B.ab,B.ai,r),r)},
