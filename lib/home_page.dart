@@ -214,8 +214,8 @@ class _HomePageState extends State<HomePage> {
               children: [
                 _buildStatItem("4+", "Years Exp"),
                 _buildStatItem("20+", "Apps Live"),
-                _buildStatItem("250+", "Tutorials"),
-                _buildStatItem("5+", "Open Source"),
+                _buildStatItem("300+", "Tutorials"),
+                _buildStatItem("10+", "Open Source"),
               ],
             )
           : Row(
@@ -223,8 +223,8 @@ class _HomePageState extends State<HomePage> {
               children: [
                 _buildStatItem("4+", "Years Exp"),
                 _buildStatItem("20+", "Apps Live"),
-                _buildStatItem("250+", "Tutorials"),
-                _buildStatItem("5+", "Open Source"),
+                _buildStatItem("300+", "Tutorials"),
+                _buildStatItem("10+", "Open Source"),
               ],
             ),
     );
