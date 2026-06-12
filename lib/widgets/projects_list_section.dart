@@ -28,7 +28,7 @@ class ProjectsListSection extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SectionHeader(
-            title: showPackages ? "Flutter Packages" : "My Projects",
+            title: showPackages ? "OPEN SOURCE PACKAGES" : "FEATURED PROJECTS",
             accentColor: showPackages ? Colors.cyanAccent : Colors.greenAccent,
           ),
           const SizedBox(height: 30),
@@ -36,8 +36,8 @@ class ProjectsListSection extends StatelessWidget {
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
             gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-              maxCrossAxisExtent: 450,
-              mainAxisExtent: isMobile ? 420 : 400,
+              maxCrossAxisExtent: 500,
+              mainAxisExtent: isMobile ? 550 : 540,
               crossAxisSpacing: 30,
               mainAxisSpacing: 30,
             ),

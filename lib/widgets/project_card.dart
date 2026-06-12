@@ -21,70 +21,107 @@ class ProjectCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Expanded(
-            child: Container(
-              width: double.infinity,
-              decoration: BoxDecoration(
-                image: DecorationImage(image: NetworkImage(project.imageUrl), fit: BoxFit.cover),
-              ),
-              child: project.isPackage
-                  ? Align(
-                      alignment: Alignment.topRight,
-                      child: Container(
-                        margin: const EdgeInsets.all(10),
-                        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-                        decoration: BoxDecoration(color: Colors.blue, borderRadius: BorderRadius.circular(20)),
-                        child: const Text("PACKAGE", style: TextStyle(color: Colors.white, fontSize: 10, fontWeight: FontWeight.bold)),
+          Container(
+            height: 320, // Increased height for 520x520 images to shine
+            width: double.infinity,
+            decoration: BoxDecoration(
+              color: Colors.black26,
+            ),
+            child: Stack(
+              children: [
+                Positioned.fill(
+                  child: Image(
+                    image: project.imageUrl.startsWith('http')
+                        ? NetworkImage(project.imageUrl)
+                        : AssetImage(project.imageUrl) as ImageProvider,
+                    fit: BoxFit.cover, // Contain ensures the 520x520 image is not cut
+                  ),
+                ),
+                if (project.isPackage)
+                  Positioned(
+                    top: 15,
+                    right: 15,
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                      decoration: BoxDecoration(
+                        color: Colors.blueAccent,
+                        borderRadius: BorderRadius.circular(20),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black26,
+                            blurRadius: 4,
+                            offset: const Offset(0, 2),
+                          )
+                        ],
                       ),
-                    )
-                  : null,
+                      child: const Text(
+                        "PACKAGE",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 10,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ),
+              ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  project.name,
-                  style: GoogleFonts.poppins(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
-                ),
-                const SizedBox(height: 10),
-                Text(
-                  project.description,
-                  maxLines: 3,
-                  overflow: TextOverflow.ellipsis,
-                  style: GoogleFonts.poppins(color: Colors.white60, fontSize: 13),
-                ),
-                const SizedBox(height: 20),
-                Wrap(
-                  spacing: 10,
-                  runSpacing: 10,
-                  children: [
-                    if (project.link != null)
-                      _buildAttractiveButton(
-                        onPressed: () => UrlHelper.launch(project.link!),
-                        icon: project.isPackage ? Icons.inventory_2 : Icons.link,
-                        label: project.isPackage ? "Pub.dev" : "Preview",
-                        color: Colors.blueAccent,
-                      ),
-                    if (project.playStoreUrl != null)
-                      _buildAttractiveButton(
-                        onPressed: () => UrlHelper.launch(project.playStoreUrl!),
-                        icon: Icons.play_arrow,
-                        label: "Play Store",
-                        color: Colors.greenAccent,
-                      ),
-                    if (project.appStoreUrl != null)
-                      _buildAttractiveButton(
-                        onPressed: () => UrlHelper.launch(project.appStoreUrl!),
-                        icon: Icons.apple,
-                        label: "App Store",
-                        color: Colors.white70,
-                      ),
-                  ],
-                ),
-              ],
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    project.name,
+                    style: GoogleFonts.poppins(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  Text(
+                    project.description,
+                    maxLines: 3, // Reduced maxLines to fit in the expanded layout
+                    overflow: TextOverflow.ellipsis,
+                    style: GoogleFonts.poppins(
+                      color: Colors.white60,
+                      fontSize: 13,
+                      height: 1.5,
+                    ),
+                  ),
+                  const Spacer(),
+                  Wrap(
+                    spacing: 10,
+                    runSpacing: 10,
+                    children: [
+                      if (project.link != null)
+                        _buildAttractiveButton(
+                          onPressed: () => UrlHelper.launch(project.link!),
+                          icon: project.isPackage ? Icons.inventory_2 : Icons.link,
+                          label: project.isPackage ? "Pub.dev" : "Preview",
+                          color: Colors.blueAccent,
+                        ),
+                      if (project.playStoreUrl != null)
+                        _buildAttractiveButton(
+                          onPressed: () => UrlHelper.launch(project.playStoreUrl!),
+                          icon: Icons.play_arrow,
+                          label: "Play Store",
+                          color: Colors.white70,
+                        ),
+                      if (project.appStoreUrl != null)
+                        _buildAttractiveButton(
+                          onPressed: () => UrlHelper.launch(project.appStoreUrl!),
+                          icon: Icons.apple,
+                          label: "App Store",
+                          color: Colors.white70,
+                        ),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
         ],

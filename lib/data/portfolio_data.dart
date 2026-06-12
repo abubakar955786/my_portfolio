@@ -33,39 +33,34 @@ class PortfolioData {
   ];
 
   static List<Project> projects = [
-    Project(
-      name: "VERSION_SENTRY",
-      description: "A professional Flutter package to streamline app updates by checking latest versions and prompting users with a customizable UI.",
-      imageUrl: "https://pub.dev/static/img/pub-dev-logo-2x.png",
-      link: "https://pub.dev/packages/version_sentry",
-      isPackage: true,
-    ),
+
     Project(
       name: "DLF Thrive",
-      description: "A premium lifestyle app for DLF residents with community features, service bookings, and event management.",
-      imageUrl: "https://via.placeholder.com/400x200/2196F3/FFFFFF?text=DLF+Thrive",
-      playStoreUrl: "https://play.google.com/store/apps/details?id=com.dlf.thrive",
-      appStoreUrl: "https://apps.apple.com/app/dlf-thrive/id123456789",
+      description: "DLF THRIVE is your premium wellness companion. A unified platform where movement, recovery, nourishment, and connection come together—effortlessly. Experience a healthier lifestyle with just one tap.",
+      imageUrl: "assets/dlf_thrive.jpg",
+      playStoreUrl: "https://play.google.com/store/apps/details?id=com.dlf.thriveapp",
+      appStoreUrl: "https://apps.apple.com/us/app/dlf-thrive-wellness-app/id6761643604",
     ),
     Project(
       name: "Dettol Swasth Champ",
-      description: "An educational app focused on hygiene and health for school-aged children, featuring interactive learning modules.",
-      imageUrl: "https://via.placeholder.com/400x200/4CAF50/FFFFFF?text=Dettol+Swasth+Champ",
-      playStoreUrl: "https://play.google.com/store/apps/details?id=com.dettol.swasth",
+      description: "Part of the Dettol Banega Swasth India initiative, this app inspires children to build powerful hygiene habits. Through fun challenges, habit tracking, and rewards, it turns everyday activities into meaningful steps toward personal wellbeing.",
+      imageUrl: "assets/dettol.jpg",
+      playStoreUrl: "https://play.google.com/store/apps/details?id=com.swasth.champ.app",
     ),
     Project(
-      name: "JobMinglr",
-      description: "A comprehensive job portal connecting employers with potential candidates through an intuitive matching algorithm.",
-      imageUrl: "https://via.placeholder.com/400x200/FF9800/FFFFFF?text=JobMinglr",
-      playStoreUrl: "https://play.google.com/store/apps/details?id=com.jobminglr",
+      name: "VERSION_SENTRY",
+      description: "A professional Flutter package to streamline app updates by checking latest versions and prompting users with a customizable UI. Supports flexible configurations for mandatory and optional updates.",
+      imageUrl: "assets/version_sentry.png",
+      link: "https://pub.dev/packages/version_sentry",
+      isPackage: true,
     ),
   ];
 
   static const String email = "abubakar955786@gmail.com";
   static const String phone = "9557880408";
   static const String address = "Bijnor (Uttar Pradesh)";
-  static const String youtubeChannel = "https://youtube.com/@AbubakarAnsari";
-  static const String resumeUrl = "assets/assets/my_resume.pdf";
+  static const String youtubeChannel = "https://youtube.com/@code_craft_";
+  static const String resumeUrl = "assets/my_resume.pdf";
   static const String githubUrl = "https://github.com/abubakar955786";
-  static const String linkedinUrl = "https://linkedin.com/in/abubakar-ansari";
+  static const String linkedinUrl = "https://www.linkedin.com/in/abu-bakar-165408252";
 }
